@@ -1,22 +1,18 @@
 Tool:Copilot
 Date:2025-05-22
-Me: I want to build a simple script to show temperature and precipitation for a location over the next few days. What’s a lightweight way to fetch weather data?
+Me:I want to build a Python app that fetches weather data and visualizes it.Can you help me start?
 
-AI: A good lightweight option is wttr.in, which returns JSON data with current conditions and forecasts. You can access it like this: https://wttr.in/London?format=j1
+  AI-Sure! Let’s begin by installing necessary packages like requests, matplotlib, and maybe pyinputplus for user menus. You’ll also need to set up API access. Here's the starter setup:
 
-Me: Great, I’ll use that. Can you sketch a function to get weather data for any city?
-
-AI: Sure, here's a function using `requests` to fetch JSON weather data for a given city:
-
-```python
-def get_weather_data(location):
-    try:
-        url = f"https://wttr.in/{location}?format=j1"
-        response = requests.get(url)
-        response.raise_for_status()
-        return response.json()
-    except requests.RequestException as e:
-        print("Error:", e)
-        return None
+python
+Copy
+Edit
+!pip install fetch-my-weather
+!pip install hands-on-ai
+!pip install pyinputplus
+import os, requests, pyinputplus as pyip, matplotlib.pyplot as plt
+os.environ['HANDS_ON_AI_SERVER'] = 'http://ollama.serveur.au'
+os.environ['HANDS_ON_AI_MODEL'] = 'granite3.2'
+os.environ['HANDS_ON_AI_API_KEY'] = input('Enter your API key: ')
 
 
