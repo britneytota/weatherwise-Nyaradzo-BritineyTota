@@ -1,1 +1,21 @@
+Tool-ChatGPT
+Date -21-05-25
 
+  MMe: I want to build a simple script to show temperature and precipitation for a location over the next few days. What’s a lightweight way to fetch weather data?
+
+AI: A good lightweight option is wttr.in, which returns JSON data with current conditions and forecasts. You can access it like this: https://wttr.in/London?format=j1
+
+Me: Great, I’ll use that. Can you sketch a function to get weather data for any city?
+
+AI: Sure, here's a function using `requests` to fetch JSON weather data for a given city:
+
+```python
+def get_weather_data(location):
+    try:
+        url = f"https://wttr.in/{location}?format=j1"
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print("Error:", e)
+        return None
