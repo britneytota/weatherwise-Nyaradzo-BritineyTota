@@ -1,0 +1,7 @@
+Tool-Copilot
+Date-21-05-25
+Me-Please explain the error:
+
+NameError: name 'plt' is not defined
+
+AI-The NameError: name "plt" was not defined becaused is was used in the create_temperature_visualisation function without being properly defined or imported beforehand.
