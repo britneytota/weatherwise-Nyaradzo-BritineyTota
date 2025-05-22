@@ -1,0 +1,19 @@
+Tool:ChatGPT
+Date:2025-05-21
+
+
+Me:You:
+Can you help me create a temperature and precipitation chart from the weather data?
+
+AI:Yes! Here's how you can visualize the average temperature and rain chance:
+
+python
+Copy
+Edit
+def create_temperature_visualisation(weather_data, output_type='display'):
+    # plotting logic
+python
+Copy
+Edit
+def create_precipitation_visualisation(weather_data, output_type='display'):
+    # bar chart logic
