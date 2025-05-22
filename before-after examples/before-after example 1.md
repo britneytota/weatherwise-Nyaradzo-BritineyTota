@@ -18,7 +18,7 @@ format:
 ## Initial Prompt
 
 ```
-Write a function to retrieve weather data from the wttr.in API for a given location.
+Write a function to get weather data from the wttr.in API for a given location.
 ```
 
 ## Initial AI-Generated Code (Before)
