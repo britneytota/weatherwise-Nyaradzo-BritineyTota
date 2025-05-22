@@ -2,19 +2,41 @@ Tool:ChatGPT
 Date:2025-05-21
 
 
-Me:You:
-Can you help me create a temperature and precipitation chart from the weather data?
+Me: Perfect. Now I want to plot both temperature and precipitation for the next 3 days. Can you help with the logic?
 
-AI:Yes! Here's how you can visualize the average temperature and rain chance:
+AI: Yes! You can loop through the next 3 days, collect max/min temperatures and precipitation (e.g., from the morning forecast), then plot them using matplotlib. Here's a possible function:
 
 python
 Copy
 Edit
-def create_temperature_visualisation(weather_data, output_type='display'):
-    # plotting logic
-python
+def display_temperature_and_precipitation(weather_data):
+    # code to extract and plot data here...
+Me: Could you combine it all and ensure the precipitation is in mm and clearly labeled?
+
+AI: Absolutely! Here’s the complete version with labels, markers, and line styles for clarity.
+
+markdown
 Copy
 Edit
-def create_precipitation_visualisation(weather_data, output_type='display'):
-    # bar chart logic
- 
+
+---
+
+### ✅ Summary
+
+- **Core Functions Used**: `get_weather_data`, `display_temperature_and_precipitation`
+- **Visuals**: Line plot showing max/min temperature and precipitation
+- **Weather Source**: `wttr.in` JSON API
+- **AI Techniques Demonstrated**:
+  - Problem restating
+  - Requesting modular code
+  - Pseudocode to full implementation
+  - Requesting improvements to visual clarity
+
+Would you like this turned into a Colab notebook or a version that works with OpenWeatherMap and an API key?
+
+
+
+
+
+
+
