@@ -1,0 +1,17 @@
+Tool-ChatGPT
+Date -21-05-25
+
+  Me:I want to build a Python app that fetches weather data and visualizes it.Can you help me start?
+
+  AI-Sure! Let’s begin by installing necessary packages like requests, matplotlib, and maybe pyinputplus for user menus. You’ll also need to set up API access. Here's the starter setup:
+
+python
+Copy
+Edit
+!pip install fetch-my-weather
+!pip install hands-on-ai
+!pip install pyinputplus
+import os, requests, pyinputplus as pyip, matplotlib.pyplot as plt
+os.environ['HANDS_ON_AI_SERVER'] = 'http://ollama.serveur.au'
+os.environ['HANDS_ON_AI_MODEL'] = 'granite3.2'
+os.environ['HANDS_ON_AI_API_KEY'] = input('Enter your API key: ')
