@@ -1,23 +1,19 @@
 Tool:ChatGPT
 Date:2025-05-21
 
-Me:You:
-I'd like users to ask weather questions like “What’s the temp in Tokyo tomorrow?”. How can I parse that?
+Me: Now that the core is working, I want to add a summary — like a quick text overview of the weather.
 
-AI:You can define a simple parser like this:
-
-python
-Copy
-Edit
-def parse_weather_question(question):
-    question = question.lower()
-    parsed = {'location': None, 'attribute': None, 'time_period': 'today'}
-    # logic to fill parsed dict
-    return parsed
-Then use the parsed result to generate a response:
+AI: Great idea. You can generate a brief summary using the API’s "avgtempC", "maxtempC", and "hourly" precipitation values. Here’s a simple summary generator:
 
 python
 Copy
 Edit
-def generate_weather_response(parsed_question, weather_data):
-    # extract and return weather information
+def generate_summary(data, location):
+    summary = f"Weather summary for {location}:\n"
+    for day in data['weather'][:3]:
+        date = day['date']
+        max_temp = day['maxtempC']
+        min_temp = day['mintempC']
+        total_precip = sum(float(h['precipMM']) for h in day['hourly'])
+        summary += f"{date}: High {max_temp}°C, Low {min_temp}°C, Precip: {total_precip:.1f} mm\n"
+    return summary
