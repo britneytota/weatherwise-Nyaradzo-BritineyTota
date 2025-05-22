@@ -1,0 +1,23 @@
+Tool:ChatGPT
+Date:2025-05-21
+
+Me:You:
+I'd like users to ask weather questions like “What’s the temp in Tokyo tomorrow?”. How can I parse that?
+
+AI:You can define a simple parser like this:
+
+python
+Copy
+Edit
+def parse_weather_question(question):
+    question = question.lower()
+    parsed = {'location': None, 'attribute': None, 'time_period': 'today'}
+    # logic to fill parsed dict
+    return parsed
+Then use the parsed result to generate a response:
+
+python
+Copy
+Edit
+def generate_weather_response(parsed_question, weather_data):
+    # extract and return weather information
