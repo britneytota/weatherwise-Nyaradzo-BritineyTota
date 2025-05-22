@@ -1,0 +1,26 @@
+Tool:ChatGPT
+Date :2025-05-21
+
+Me:How do I get weather data for a location using WeatherAPI?
+
+AI:You can use the /forecast.json endpoint. Here's a function to get the weather forecast:
+
+python
+Copy
+Edit
+def get_weather_data(location, forecast_days=3):
+    endpoint = f"http://api.weatherapi.com/v1/forecast.json"
+    params = {
+        'key': WEATHER_API_KEY,
+        'q': location,
+        'days': forecast_days,
+        'aqi': 'no',
+        'alerts': 'no'
+    }
+    try:
+        response = requests.get(endpoint, params=params)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error fetching data for {location}: {e}")
+        return None
