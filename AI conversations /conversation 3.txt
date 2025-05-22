@@ -17,3 +17,4 @@ Copy
 Edit
 def create_precipitation_visualisation(weather_data, output_type='display'):
     # bar chart logic
+ 
