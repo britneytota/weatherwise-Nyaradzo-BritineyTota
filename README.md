@@ -11,7 +11,7 @@ Welcome to the **WeatherWise Assignment Starter Template**! This repository help
 
 ## 📁 Folder Structure
 
-- `starter_notebook.ipynb` — This is the my project
+- `starter_notebook.ipynb` — This is the my project 
 
 - `ai-conversations/` — This is where I have uploaded my ai conversations
   - `checklist-md.md` — Submission checklist
