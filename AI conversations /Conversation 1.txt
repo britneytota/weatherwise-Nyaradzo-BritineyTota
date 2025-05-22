@@ -1,6 +1,6 @@
-Tool-Copilot
-Date-21-05-25
-Me-Please explain the error:
+Tool:Copilot
+Date:2025-05-22
+Me:Please explain the error:
 
 NameError: name 'plt' is not defined
 
